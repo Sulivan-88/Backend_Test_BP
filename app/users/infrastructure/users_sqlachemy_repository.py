@@ -1,7 +1,8 @@
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 from app.users.domain.user_repository import UserRepository
-from app.models.user_model import User
 from app.shared.base import SessionLocal
+from app.users.infrastructure.users_table import User
 
 
 class SQLAlchemyUserRepository(UserRepository):
@@ -9,18 +10,22 @@ class SQLAlchemyUserRepository(UserRepository):
         self.session = session
 
     def create_user(self, user: User) -> User:
-        self.session.add(user)
+        create_user = User(id=user.id, name=user.name, description=user.description, role=user.role)
+        self.session.add(create_user)
         self.session.commit()
-        self.session.refresh(user)
-        return user
+        self.session.refresh(create_user)
+        return create_user
 
     def get_user(self, user_id: int) -> User:
-        return self.session.query(User).filter(User.id == user_id).first()
+        query = select(User).where(User.id == user_id)
+        user = self.session.execute(query)
+        return user.scalar_one_or_none()
 
     def update_user(self, user_id: int, user: User) -> User:
         db_user = self.get_user(user_id)
-        db_user.username = user.username
-        db_user.email = user.email
+        db_user.name = user.name
+        db_user.description = user.description
+        db_user.role = user.role
         self.session.commit()
         self.session.refresh(db_user)
         return db_user
@@ -28,3 +33,6 @@ class SQLAlchemyUserRepository(UserRepository):
     def delete_user(self, user_id: int) -> None:
         self.session.query(User).filter(User.id == user_id).delete()
         self.session.commit()
+
+    def get_all_users(self) -> list[User]:
+        return self.session.query(User).all()
