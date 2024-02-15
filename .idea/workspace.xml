@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c3ea26d-eb92-4731-b9d5-478ffaadd220" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Banpay.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/shared/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/shared/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/application/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/application/users_crud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/domain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/domain/user_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/infrastructure/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/users/infrastructure/users_sqlachemy_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/users/infrastructure/users_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/shared/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/shared/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/application/users_crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/application/users_crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/domain/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/domain/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/users/infrastructure/users_sqlachemy_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/users/infrastructure/users_sqlachemy_repository.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +27,16 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2cKWX3eNM3H07ydVhszr9HbFlrv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,16 +45,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "FastAPI.Unnamed.executor": "Debug",
     "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "C:/Users/Iván/Desktop/Banpay/Banpay/main.py",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -72,7 +71,7 @@
       <recent name="C:\Users\Iván\Desktop\Banpay\Banpay\app\users" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="FastAPI.Unnamed">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Banpay" />
       <option name="ENV_FILES" value="" />
@@ -96,6 +95,26 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unnamed" type="Python.FastAPI" nameIsGenerated="true">
+      <option name="file" value="C:\Users\Iván\Desktop\Banpay\Banpay\main.py" />
+      <module name="Banpay" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\Iván\Desktop\Banpay\Banpay\.venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (Banpay)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="FastAPI.Unnamed" />
+      <item itemvalue="Python.main" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -112,7 +131,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707860786444</updated>
-      <workItem from="1707860792199" duration="11405000" />
+      <workItem from="1707860792199" duration="16307000" />
+      <workItem from="1707938614564" duration="5505000" />
+      <workItem from="1707982660726" duration="210000" />
+      <workItem from="1707983063492" duration="9061000" />
     </task>
     <servers />
   </component>
@@ -120,6 +142,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Banpay$main.coverage" NAME="main Coverage Results" MODIFIED="1707886266850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Banpay$main.coverage" NAME="main Coverage Results" MODIFIED="1707982431404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Banpay$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1707983386280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
