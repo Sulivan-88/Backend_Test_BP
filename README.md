@@ -1,5 +1,6 @@
 Bienvenido a la prueba de Backend en python para Banpay.
 
+Este proyecto utiliza Python 3.11
 Para poder levantar el proyecto es necesario la creacion de un entorno virtual e instalacion de sus dependencias.
 Puedes instalar todas las dependencias por medio del archivo requirements.txt de la siguiente manera:
 
