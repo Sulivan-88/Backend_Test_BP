@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from app.models.user_model import UserResponse
+from app.models.user_model import UserResponse, RoleResponse
 from app.users.infrastructure.users_table import User
 
 
@@ -21,4 +21,8 @@ class UserRepository(ABC):
         raise NotImplementedError
 
     def get_all_users(self) -> UserResponse:
+        raise NotImplementedError
+
+    @abstractmethod
+    def get_info_by_role(self, user_id: int) -> str:
         raise NotImplementedError

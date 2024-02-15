@@ -1,4 +1,7 @@
+from typing import Dict, Any
+
 from sqlalchemy import select
+from sqlalchemy.engine import Result
 from sqlalchemy.orm import Session
 from app.users.domain.user_repository import UserRepository
 from app.shared.base import SessionLocal
@@ -36,3 +39,8 @@ class SQLAlchemyUserRepository(UserRepository):
 
     def get_all_users(self) -> list[User]:
         return self.session.query(User).all()
+
+    def get_info_by_role(self, user_id: int) -> dict[str, Result] | dict[Any, Any]:
+        query = select(User.role).where(User.id == user_id)
+        role = self.session.execute(query)
+        return role.scalar_one_or_none()

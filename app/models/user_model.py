@@ -16,7 +16,12 @@ class UserUpdate(BaseModel):
 
 
 class UserCreate(BaseModel):
-    id: Optional[int] = None
+    id: int
     name: Optional[str] = None
     description: Optional[str] = None
     role: Optional[str] = None
+
+
+class RoleResponse(BaseModel):
+    role: Optional[str] = None
+

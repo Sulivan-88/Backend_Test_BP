@@ -10,7 +10,6 @@ router = APIRouter()
 user_service = UserService(SQLAlchemyUserRepository())
 
 
-
 @router.get(
     "/users/",
     status_code=status.HTTP_200_OK,
@@ -30,10 +29,10 @@ def get_all_users() -> UserResponse:
     summary="Obtiene un usuario con base en su id")
 def get_user(user_id: int) -> UserResponse:
     try:
-        user = user_service.get_user(user_id)
-        if user is None:
+        role = user_service.get_user(user_id)
+        if role is None:
             raise HTTPException(status_code=404, detail="User not found")
-        return user
+        return role
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
 
@@ -73,13 +72,12 @@ def delete_user(user_id: int) -> Dict[str, str]:
 @router.get(
     "/roles_by_id/{user_id}",
     status_code=status.HTTP_200_OK,
-    response_model=UserResponse,
     summary="Obtiene informacion de acuerdo al rol del id del usuario")
-def get_user(user_id: int) -> UserResponse:
+def get_info(user_id: int):
     try:
-        user = user_service.get_user(user_id)
+        user = user_service.get_info_by_role(user_id)
         if user is None:
             raise HTTPException(status_code=404, detail="User not found")
-        return user
+        return {"data": user}
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
